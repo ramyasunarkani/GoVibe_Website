@@ -1,0 +1,109 @@
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    max-width: 500px;
+    margin: 20px auto;
+    padding: 20px;
+    background: #f9f9f9;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+input,
+textarea,
+select {
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+input[type="file"] {
+    border: none;
+}
+.listing-header{
+    display: flex;
+    justify-content: space-between;
+}
+.new-btn {
+    padding: 10px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    font-weight: bold;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-right: 10px;
+        margin-top: 10px;
+}
+
+.new-btn:hover {
+    background-color: #0056b3;
+}
+
+.listing-card {
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 15px;
+    margin: 20px auto;
+    max-width: 600px;
+    background: #ffffff;
+    box-shadow: 0 1px 5px rgba(0, 0, 0, 0.08);
+}
+
+.listing-card h3 {
+    margin: 0 0 10px;
+}
+
+.listing-card p {
+    margin: 5px 0;
+}
+
+.listing-card img {
+    margin-right: 5px;
+    margin-bottom: 5px;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+}
+.list-btn{
+    padding: 5px;
+    margin: 3px;
+    border: none;
+    background-color: brown;
+    border-radius: 3px;
+    color: white;
+    cursor: pointer;
+}
+.list-new{
+    padding: 5px;
+        border: none;
+        background-color: rgb(112, 173, 20);
+        font-size: 20px;
+        color: white;
+        margin-top: 5px;
+        border-radius: 3px;
+}
+.search-bar {
+    display: flex;
+    gap: 0.5rem;
+    margin: 1rem 0;
+    align-items: center;
+}
+
+.search-bar input {
+    padding: 0.5rem;
+    width: 250px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.search-bar button {
+    padding: 0.5rem 1rem;
+    background-color: #3498db;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+

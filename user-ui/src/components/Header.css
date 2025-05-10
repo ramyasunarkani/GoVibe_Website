@@ -1,0 +1,140 @@
+/* Header Styles */
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.5rem 2rem;
+    background-color: #fff;
+    border-bottom: 1px solid rgb(191, 188, 188);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    margin-bottom: 10px;
+}
+
+.logo-container {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    cursor: pointer;
+}
+
+.logo-container span {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-weight: 600;
+    font-size: 1.8rem;
+    color: #b22222;
+    /* Firebrick */
+}
+
+/* Sign-in Button */
+.sign-btn {
+    border: none;
+    background-color: #FFFFFF;
+    font-size: 1.1rem;
+    color: #b22222;
+    /* Firebrick */
+    cursor: pointer;
+}
+
+.sign-btn:hover {
+    font-size: 1.2rem;
+}
+
+/* Sub-section (Profile, Wishlist, Cart icons) */
+.sub-section {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+    color: #444;
+    cursor: pointer;
+}
+
+.sub-section span {
+    color: #b22222;
+    /* Firebrick */
+}
+
+.sub-section span:hover {
+    color: #b22222;
+    /* Firebrick */
+    transform: scale(1.1);
+    transition: all 0.2s ease-in-out;
+}
+
+/* Profile Dropdown Styles */
+.profile-icon {
+    cursor: pointer;
+    position: relative;
+}
+
+.dropdown-menu {
+    position: absolute;
+    top: 50px;
+    right: 0;
+    background-color: white;
+    border: 1px solid #ddd;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 15px;
+    width: 200px;
+    border-radius: 5px;
+    z-index: 1000;
+}
+
+.user-info p {
+    margin: 5px 0;
+}
+
+.logout-btn {
+    margin-top: 10px;
+    padding: 8px 15px;
+    background-color: #f44336;
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 4px;
+}
+
+.logout-btn:hover {
+    background-color: #d32f2f;
+}
+
+/* Hero Section */
+.hero-section {
+    position: relative;
+    background-image: url('../assets/back.webp');
+    background-size: cover;
+    background-position: center;
+    height: 350px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    text-align: center;
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 1;
+    /* To place overlay behind content */
+}
+
+.content {
+    position: relative;
+    z-index: 2;
+}
+
+.content button {
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: #EE6B01;
+    color: #000000;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    margin-top: 0.5rem;
+    color: white;
+}

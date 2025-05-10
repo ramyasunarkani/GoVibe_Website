@@ -1,0 +1,173 @@
+/* Layout for listings page */
+.listings-page {
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 0;
+    padding-left: 0;
+}
+
+/* Search Bar as Header */
+.search-header {
+    display: flex;
+    justify-content: center;
+    margin: 20px;
+}
+
+.search-input {
+    width: 60%;
+    padding: 10px;
+    font-size: 16px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+/* Content container for filters and listings */
+.content-container {
+    display: flex;
+    gap: 20px;
+    padding-left: 0;
+}
+
+/* Sidebar for filters */
+.sidebar {
+    width: 250px;
+    background-color: #f8f8f8;
+    padding: 20px;
+    border-radius: 10px;
+    margin-bottom: 0;
+}
+
+.sidebar h3 {
+    margin-bottom: 15px;
+    font-size: 18px;
+}
+
+.sidebar label {
+    display: block;
+    margin-bottom: 15px;
+    font-weight: 500;
+}
+
+.sidebar input {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    box-sizing: border-box;
+}
+
+/* Category buttons */
+.category-buttons {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.category-btn {
+    padding: 8px;
+    font-size: 14px;
+    border: 1px solid #ccc;
+    border-radius: 24px;
+    background-color: #f9f9f9;
+    color: #333;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.category-btn:hover {
+    background-color: #e6f0ff;
+    border-color: #80bdff;
+}
+
+.category-btn.active {
+    background-color: #007bff;
+    color: white;
+    border-color: #007bff;
+}
+
+/* Row inputs (Max price and Availability) */
+.row-inputs {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.checkbox-label {
+    display: inline;
+    font-weight: 500;
+    align-content: center;
+}
+
+/* Listing layout */
+.listing-rows {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    margin-bottom: 2rem;
+}
+
+.listing-row {
+    display: flex;
+    background: #fff;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+.listing-image-container {
+    position: relative;
+}
+
+.listing-thumb {
+    width: 200px;
+    height: 150px;
+    object-fit: cover;
+}
+
+/* Like Button (consolidated) */
+.like-btn {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background: none;
+    border: none;
+    font-size: 24px;
+    cursor: pointer;
+    color: #022d17;
+    transition: color 0.3s ease;
+}
+
+.like-btn:hover {
+    color: #ff0000;
+}
+
+.like-btn.liked {
+    color: red;
+}
+
+/* Listing info and actions */
+.listing-info {
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.listing-info h3 {
+    margin: 0;
+}
+
+.listing-actions button {
+    padding: 8px 15px;
+    font-size: 14px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.listing-actions button:hover {
+    background-color: #0056b3;
+}

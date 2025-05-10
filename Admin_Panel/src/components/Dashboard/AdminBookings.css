@@ -1,0 +1,44 @@
+.admin-bookings-container {
+    padding: 20px;
+    max-width: 1000px;
+    margin: auto;
+}
+
+.booking-card {
+    display: flex;
+    gap: 20px;
+    border: 1px solid #ddd;
+    padding: 16px;
+    margin-bottom: 20px;
+    border-radius: 8px;
+    position: relative;
+    /* background-color: #fff; */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+    margin-top: 2rem;
+}
+
+.booking-image img {
+    width: 200px;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 6px;
+}
+
+.booking-details {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    /* background-color: white; */
+}
+
+.status-dropdown {
+    position: absolute;
+    right: 20px;
+    top: 20px;
+}
+
+.status-dropdown select {
+    padding: 5px;
+    font-size: 14px;
+}

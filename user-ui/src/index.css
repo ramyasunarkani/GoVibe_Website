@@ -1,0 +1,9 @@
+/* Prevent unwanted vertical scroll */
+body,
+html {
+    margin: 0;
+    padding: 0;
+    overflow-y: auto;
+    overflow-x: hidden;
+    height: 100%;
+}
