@@ -1,17 +1,13 @@
-import React from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { toast } from "react-toastify";
 import "./Wishlist.css";
 import { wishlistActions } from "../Store/wishlistSlice";
 import { useNavigate } from "react-router-dom";
 
 const Wishlist = () => {
   const dispatch = useDispatch();
-  const userEmail = useSelector((state) => state.auth.userEmail);
   const wishlistItems = useSelector((state) => state.wishlist.items);
   const navigate=useNavigate();
 
-  // Handle delete from wishlist
   const handleDelete = (itemId) => {
     dispatch(wishlistActions.removeItem(itemId));
   };
@@ -28,7 +24,6 @@ const Wishlist = () => {
           wishlistItems.map((item) => (
             <div key={item.id} className="wishlist-item">
               <div className="wishlist-item-image">
-                {/* Check if images array exists and has at least one item */}
                 <img
                   src={item.images && item.images.length > 0 ? item.images[0] : "placeholder-image-url.jpg"}
                   alt={item.placeName}

@@ -39,7 +39,6 @@ const SignUp = () => {
 
     setLoading(true);
     try {
-      // Sign up user
       const res = await axios.post(
         'https://identitytoolkit.googleapis.com/v1/accounts:signUp?key=AIzaSyDvgdmwulpxL47k4OoiPinzGUINuoBbjec',
         {
@@ -52,7 +51,6 @@ const SignUp = () => {
       const idToken = res.data.idToken;
       console.log(res.data)
 
-      // Update profile with name
       await axios.post(
         'https://identitytoolkit.googleapis.com/v1/accounts:update?key=AIzaSyDvgdmwulpxL47k4OoiPinzGUINuoBbjec',
         {

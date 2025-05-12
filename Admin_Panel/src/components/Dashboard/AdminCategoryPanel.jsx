@@ -5,7 +5,6 @@ import { addNewCategory, deleteCategory, editCategories } from '../../Store/cate
 import './AdminCategoryPanel.css'
 const AdminCategoryPanel = () => {
     const categories = useSelector((state) => state.categories.categories);
-    console.log(categories)
   const [showModal, setShowModal] = useState(false);
   const [editingId, setEditingId] = useState(null);
 

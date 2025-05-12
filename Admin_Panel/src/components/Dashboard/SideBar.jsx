@@ -6,7 +6,6 @@ import { BiAddToQueue } from "react-icons/bi";
 import { IoMdHome } from "react-icons/io";
 
 const SideBar = () => {
-  console.log('its render')
   return (
     <div className='sidebar'>
       <NavLink to="categories" className='nav-link'>

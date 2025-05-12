@@ -26,7 +26,6 @@ function App() {
 
   const dispatch = useDispatch();
 
-  // Fetch categories, listings, wishlist, and bookings for logged-in users
   useEffect(() => {
     if (userEmail) {
      

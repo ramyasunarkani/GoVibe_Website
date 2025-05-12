@@ -25,7 +25,6 @@ const CategorySlider = () => {
   };
 
   const handleCategoryClick = (category) => {
-    // Navigate to AllListings page and pass the selected category as a query parameter
     navigate(`/listings?category=${category}`);
   };
 

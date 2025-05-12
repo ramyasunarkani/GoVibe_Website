@@ -37,7 +37,6 @@ const Login = () => {
         }
       );
 
-      console.log(res.data);
       dispatch(authActions.login(res.data.idToken)); 
       emailRef.current.value = '';
       passwordRef.current.value = '';

@@ -1,4 +1,3 @@
-/* Layout for listings page */
 .listings-page {
     display: flex;
     flex-direction: column;
@@ -6,7 +5,6 @@
     padding-left: 0;
 }
 
-/* Search Bar as Header */
 .search-header {
     display: flex;
     justify-content: center;
@@ -21,14 +19,12 @@
     border: 1px solid #ccc;
 }
 
-/* Content container for filters and listings */
 .content-container {
     display: flex;
     gap: 20px;
     padding-left: 0;
 }
 
-/* Sidebar for filters */
 .sidebar {
     width: 250px;
     background-color: #f8f8f8;
@@ -56,11 +52,11 @@
     box-sizing: border-box;
 }
 
-/* Category buttons */
 .category-buttons {
     display: flex;
     flex-direction: column;
     gap: 10px;
+    margin-bottom: 1rem;
 }
 
 .category-btn {
@@ -85,7 +81,6 @@
     border-color: #007bff;
 }
 
-/* Row inputs (Max price and Availability) */
 .row-inputs {
     display: flex;
     flex-direction: column;
@@ -93,12 +88,16 @@
 }
 
 .checkbox-label {
-    display: inline;
-    font-weight: 500;
-    align-content: center;
-}
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    cursor: pointer;
+    margin: 4px 0;    
+ }
+ .checkbox-label input{
+    width: 30px;
+ }
 
-/* Listing layout */
 .listing-rows {
     flex: 1;
     display: flex;
@@ -125,7 +124,6 @@
     object-fit: cover;
 }
 
-/* Like Button (consolidated) */
 .like-btn {
     position: absolute;
     top: 10px;
@@ -146,7 +144,6 @@
     color: red;
 }
 
-/* Listing info and actions */
 .listing-info {
     padding: 15px;
     display: flex;

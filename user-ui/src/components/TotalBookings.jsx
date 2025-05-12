@@ -1,14 +1,11 @@
 import React, { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import { fetchBookings } from '../store/booking_actions'; // adjust path if needed
-import './TotalBookings.css'; // CSS file for styles
+import './TotalBookings.css'; 
 import { useNavigate } from 'react-router-dom';
 
 const TotalBookings = () => {
   const dispatch = useDispatch();
   const bookings = useSelector((state) => state.bookings.bookings);
-  const userEmail = useSelector((state) => state.auth.userEmail); // adjust if needed
-  const navigate =useNavigate();
 
  
 

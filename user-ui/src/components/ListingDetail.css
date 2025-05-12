@@ -58,7 +58,6 @@
     border-radius: 4px;
 }
 
-/* Slick arrow customization */
 .slick-prev::before,
 .slick-next::before {
     color: white;

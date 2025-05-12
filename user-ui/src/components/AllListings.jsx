@@ -16,24 +16,25 @@ const AllListings = () => {
   const userEmail = useSelector((state) => state.auth.userEmail);
   const wishlistItems = useSelector((state) => state.wishlist.items);
 
-  // Get initial filters from URL query params
   const queryParams = new URLSearchParams(location.search);
   const initialFilters = {
     search: queryParams.get("search") || "",
     category: queryParams.get("category") || "",
     maxPrice: queryParams.get("maxPrice") || "",
     available: queryParams.get("available") === "true",
+    popular: queryParams.get("popular") === "true",
   };
 
   const [filters, setFilters] = useState(initialFilters);
 
-  // Update URL query string when filters change
   useEffect(() => {
     const query = new URLSearchParams();
     if (filters.search) query.set("search", filters.search);
     if (filters.category) query.set("category", filters.category);
     if (filters.maxPrice) query.set("maxPrice", filters.maxPrice);
     if (filters.available) query.set("available", "true");
+    if (filters.popular) query.set("popular", "true");
+    
 
     navigate(`/listings?${query.toString()}`, { replace: true });
   }, [filters, navigate]);
@@ -76,7 +77,8 @@ const AllListings = () => {
         listing.description?.toLowerCase().includes(searchQuery)) &&
       (!filters.category || listing.category === filters.category) &&
       (!filters.maxPrice || listing.pricePerNight <= Number(filters.maxPrice)) &&
-      (!filters.available || listing.availability === true)
+      (!filters.available || listing.availability === true)&&
+      (!filters.popular || listing.popular === true)
     );
   });
 
@@ -84,7 +86,6 @@ const AllListings = () => {
 
   return (
     <div className="listings-page">
-      {/* Search Bar Header */}
       <header className="search-header">
         <input
           type="text"
@@ -116,12 +117,13 @@ const AllListings = () => {
           <label>
             Max Price (per night):
             <input
-              name="maxPrice"
-              type="number"
-              value={filters.maxPrice}
-              onChange={handleFilterChange}
-              placeholder="e.g. 5000"
-            />
+                name="maxPrice"
+                type="number"
+                value={filters.maxPrice || ""}  
+                onChange={handleFilterChange}
+                placeholder="e.g. 5000"
+              />
+
           </label>
 
           <label className="checkbox-label">
@@ -132,6 +134,15 @@ const AllListings = () => {
               onChange={handleFilterChange}
             />
             Available
+          </label>
+          <label className="checkbox-label">
+            <input
+              name="popular"
+              type="checkbox"
+              checked={filters.popular}
+              onChange={handleFilterChange}
+            />
+            Popular
           </label>
         </aside>
 

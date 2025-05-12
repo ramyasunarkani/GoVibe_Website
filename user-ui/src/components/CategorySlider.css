@@ -37,7 +37,6 @@
     color: #555;
 }
 
-/* Slick dots (pagination) customization */
 .slick-dots li button:before {
     color: #999;
     font-size: 12px;
@@ -47,7 +46,6 @@
     color: #333;
 }
 
-/* Arrow customization */
 .slick-prev,
 .slick-next {
     z-index: 1;

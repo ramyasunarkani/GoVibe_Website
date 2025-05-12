@@ -11,7 +11,7 @@ const BookingPage = ({
   setGuests,
   setUserAddress,
   handleBookingSubmit,
-  closeModal // New prop to close the modal
+  closeModal 
 }) => {
   return (
     <form className="booking-modal">

@@ -40,7 +40,6 @@ const Header = () => {
             <PiShoppingCartSimpleThin size={25} />
           </span>
 
-          {/* Profile icon */}
           <span
             className="profile-icon"
             onClick={() => setIsDropdownOpen((prev) => !prev)}
@@ -48,7 +47,6 @@ const Header = () => {
             <CiUser size={25} />
           </span>
 
-          {/* Dropdown Menu */}
           {isDropdownOpen && (
             <div className="dropdown-menu">
               <div className="user-info">

@@ -3,8 +3,8 @@ import { createSlice } from '@reduxjs/toolkit';
 const authInitialState = {
   token: localStorage.getItem('utoken'),
   userLogged: !!localStorage.getItem('utoken'),
-  userName: localStorage.getItem('userName') || '', // Load from localStorage if available
-  userEmail: localStorage.getItem('userEmail') || '', // Load from localStorage if available
+  userName: localStorage.getItem('userName') || '', 
+  userEmail: localStorage.getItem('userEmail') || '', 
 };
 
 const authSlice = createSlice({
@@ -18,7 +18,6 @@ const authSlice = createSlice({
       state.userName = name || '';
       state.userEmail = email || '';
 
-      // Store token, user name, and email in localStorage
       localStorage.setItem('utoken', token);
       localStorage.setItem('userName', name || '');
       localStorage.setItem('userEmail', email || '');
@@ -29,7 +28,6 @@ const authSlice = createSlice({
       state.userName = '';
       state.userEmail = '';
       
-      // Remove token, user name, and email from localStorage
       localStorage.removeItem('utoken');
       localStorage.removeItem('userName');
       localStorage.removeItem('userEmail');
